@@ -43,7 +43,7 @@ const App = () => {
   useEffect(() => {
     console.log(window.location.hostname);
     setWs(
-      webSocket(`http://localhost:8282/`, {
+      webSocket(`http://${window.location.hostname}/`, {
         transports: ["websocket"],
       })
     );
